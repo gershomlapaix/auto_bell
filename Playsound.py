@@ -14,7 +14,6 @@ class Playsound:
         self.duration = duration
     
     def playSound(self):
-       print(self.path)
        sound_player = mixer.Sound(self.path)
        sound_player.play()
        time.sleep(self.duration)

@@ -15,7 +15,7 @@ class Main:
             now = time.localtime()
             if(now.tm_hour == int(self.time[0]) and now.tm_min == int(self.time[1])):
                 print("Harahiye kbx!!!")
-                test_sound = Playsound("./audio/sample.mp3",5)
+                test_sound = Playsound("./audio/sample.mp3",10)
                 test_sound.playSound()
                 # time.sleep(60)
             else:
@@ -24,7 +24,7 @@ class Main:
 
 #Main execution 
 def main():
-    test = Main("19:58")
+    test = Main("20:06")
 
     test.run()
     
