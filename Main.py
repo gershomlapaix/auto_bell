@@ -6,33 +6,34 @@
 # from Playsound import Playsound
 import os
 from db.connection import Connection
+from db.migrations import Migration
 
 import time
 
 cwd = os.getcwd()
 
+
 class Main:
     def __init__(self, given_time):
         self.time = given_time.split(":")
-    
+
     def run(self):
         while True:
             now = time.localtime()
-            if(now.tm_hour == int(self.time[0]) and now.tm_min == int(self.time[1])):
+            if (now.tm_hour == int(self.time[0]) and now.tm_min == int(self.time[1])):
                 print("Harahiye kbx!!!")
-                test_sound = Playsound("./audio/sample.mp3",10)
+                test_sound = Playsound("./audio/sample.mp3", 10)
                 test_sound.playSound()
                 # time.sleep(60)
             else:
-                print(now.tm_hour,":",now.tm_min,":",now.tm_sec,"\n")
+                print(now.tm_hour, ":", now.tm_min, ":", now.tm_sec, "\n")
                 time.sleep(1)
 
-#Main execution 
-def main():
-    # test = Main("20:06")
-    print('sdjk')
 
-    connect = Connection(cwd)
-    connect.create_connection()
+def main():
+    connection = Connection(cwd)
+    migration = Migration(connection)
+    migration.run_migrations()
+
 
 main()
