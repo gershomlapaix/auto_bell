@@ -1,7 +1,3 @@
-#
-# Mongo.java This is a class for connecting to mongodb 
-# @author Cedric Izabayo
-#
 
 from pymongo import MongoClient
 

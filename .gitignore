@@ -12,9 +12,11 @@ build/
 develop-eggs/
 dist/
 downloads/
+.idea/
 eggs/
 .eggs/
 lib/
+venv/
 lib64/
 parts/
 sdist/

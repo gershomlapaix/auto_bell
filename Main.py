@@ -4,7 +4,11 @@
 #
 
 from Playsound import Playsound
+import os
+
 import time
+
+cwd = os.getcwd()
 
 class Main:
     def __init__(self, given_time):
