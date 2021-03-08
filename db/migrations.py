@@ -15,13 +15,15 @@ class Migration:
         self.cursor = self.connection.cursor()
 
     def run_migrations(self):
-        self.create_test_table()
+        print('Running migrations ........')
+        self.create_users_table()
 
-    def create_test_table(self):
-        query = "CREATE TABLE contacts ( contact_id INTEGER PRIMARY KEY, first_name TEXT NOT NULL, last_name TEXT NOT " \
-                "NULL, email TEXT NOT NULL UNIQUE,phone TEXT NOT NULL UNIQUE); "
+    def create_users_table(self):
+        query = "CREATE TABLE IF NOT EXISTS users ( contact_id INTEGER PRIMARY KEY, first_name TEXT NOT NULL, " \
+                " last_name TEXT NOT NULL, email TEXT NOT NULL UNIQUE,phone TEXT NOT NULL UNIQUE); "
         self.cursor.execute(query)
         self.connection.commit()
 
     def __del__(self):
+        print('Migrations run successfully')
         self.connection.close()
