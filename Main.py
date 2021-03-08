@@ -3,8 +3,9 @@
 # @author Cedric & Souvede
 #
 
-from Playsound import Playsound
+# from Playsound import Playsound
 import os
+from db.connection import Connection
 
 import time
 
@@ -28,8 +29,10 @@ class Main:
 
 #Main execution 
 def main():
-    test = Main("20:06")
+    # test = Main("20:06")
+    print('sdjk')
 
-    test.run()
-    
+    connect = Connection(cwd)
+    connect.create_connection()
+
 main()
