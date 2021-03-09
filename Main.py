@@ -31,9 +31,7 @@ class Main:
 
 
 def main():
-    connection = Connection(cwd)
-    migration = Migration(connection)
-    migration.run_migrations()
+    Migration(Connection(cwd)).run_migrations()
 
 
 main()
