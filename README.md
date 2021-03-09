@@ -14,7 +14,7 @@ pip install virtualenv (for first use)
 ### Windows
 ```
 pip install virtualenv (for first use)
-py -m venv env
+py -m venv venv
 .\env\Scripts\activate
 cd app/
 pip install -r requirements.txt
