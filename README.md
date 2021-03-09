@@ -1,5 +1,5 @@
 # AUTO BELL
-# Set up your virtual environment
+### Get Started 🔔🔔
 
 ### Linux
 ```json
