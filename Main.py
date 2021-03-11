@@ -3,8 +3,10 @@
 # @author Cedric & Souvede
 #
 
-# from Playsound import Playsound
+from Playsound import Playsound
 import os
+
+from auto_bell.Playsound import Playsound
 from db.connection import Connection
 from db.migrations import Migration
 
@@ -20,7 +22,7 @@ class Main:
     def run(self):
         while True:
             now = time.localtime()
-            if (now.tm_hour == int(self.time[0]) and now.tm_min == int(self.time[1])):
+            if now.tm_hour == int(self.time[0]) and now.tm_min == int(self.time[1]):
                 print("Harahiye kbx!!!")
                 test_sound = Playsound("./audio/sample.mp3", 10)
                 test_sound.playSound()
@@ -33,5 +35,6 @@ class Main:
 def main():
     Migration(Connection(cwd)).run_migrations()
 
-
 main()
+
+Main.run()
