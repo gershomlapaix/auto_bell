@@ -36,5 +36,3 @@ def main():
     Migration(Connection(cwd)).run_migrations()
 
 main()
-
-Main.run()
