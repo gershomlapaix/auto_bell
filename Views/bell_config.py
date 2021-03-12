@@ -1,3 +1,5 @@
+# @author: GERSHOM
+
 from colorama import Fore, Back, Style 
 # this is the file for bell configuration
 
@@ -60,3 +62,4 @@ else:
 print('                Bell Power Management\n')
 # print('  ----------            ------------           ------------')
 print(f'   {Back.YELLOW} {Fore.WHITE}{domBell} {Style.RESET_ALL}{Back.RED}{Fore.WHITE}20%{Style.RESET_ALL}           {Back.YELLOW} {Fore.WHITE} {classBell}{Style.RESET_ALL}{Back.GREEN} {Fore.WHITE}60%{Style.RESET_ALL}            {Back.YELLOW} {Fore.WHITE}{dinBell} {Style.RESET_ALL}{Back.GREEN}{Fore.WHITE}90%{Style.RESET_ALL}')
+print('\n\n')
